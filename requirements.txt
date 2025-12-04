@@ -1,11 +1,19 @@
-opencv-python-headless==4.10.0.84
-ultralytics
-torch
-torchvision
+# ---- Lightweight CPU Friendly Requirements for Render ----
+
 Flask
 gunicorn
+Flask-Mail
+
+ultralytics
+opencv-python-headless==4.10.0.84
+
 pandas
 numpy
 Pillow
-Flask-Mail
-onnxruntime
+
+onnxruntime==1.20.0   # stable CPU version
+
+# ---- CPU ONLY PyTorch ----
+torch==2.3.0+cpu
+torchvision==0.18.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu

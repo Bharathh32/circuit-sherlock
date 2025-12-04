@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 from PIL import Image
 import pandas as pd
 import base64
@@ -36,7 +36,7 @@ os.makedirs(RESULT_FOLDER, exist_ok=True)
 # ---------------------------
 #  LOAD ONNX MODEL + LABELS
 # ---------------------------
-session = ort.InferenceSession("model/best8.onnx", providers=['CPUExecutionProvider'])
+session = ort.InferenceSession("model/best.onnx", providers=['CPUExecutionProvider'])
 
 # Load class names (same order as your original model)
 model_names = {
@@ -210,7 +210,7 @@ Message:
 # LIVE FRAME PROCESSING
 @app.route("/process_frame", methods=["POST"])
 def process_frame():
-    
+
     image_data = request.form["frame"]
     image_bytes = base64.b64decode(image_data.split(",")[1])
     np_arr = np.frombuffer(image_bytes, np.uint8)

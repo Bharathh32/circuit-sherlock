@@ -1,5 +1,5 @@
 opencv-python-headless==4.10.0.84
-ultralytics
+ultralytics==8.1.0
 onnxruntime
 Flask
 gunicorn

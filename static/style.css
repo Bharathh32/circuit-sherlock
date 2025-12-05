@@ -34,7 +34,7 @@
 }
 
 .nav-link:hover   {
-color: white;
+color: #04D9FF;
 }
 
 .navbar-brand{
@@ -44,6 +44,22 @@ color: white;
 
 .navbar-brand:hover{
     color: white;
+}
+
+.nav-about:hover{
+   color: #ef7128;
+}
+
+.nav-index:hover{
+    color: gold;
+}
+
+.nav-contact:hover{
+    color: green;
+}
+
+.nav-result:hover{
+color: rgba(197, 39, 197, 0.858);
 }
 
 /* Footer Section */
@@ -1020,7 +1036,7 @@ body {
 
 /* Result Page Stylings */
 .result-background{
-    background: url('./Assets/ultra.jpg') no-repeat center center/cover;
+    background: url('./Assets/result_background.png') no-repeat center center/cover;
 }
 
 .result-background::before {
@@ -1127,3 +1143,80 @@ body {
     background: linear-gradient(135deg, #33f2ff, #1d7dff);
     /* box-shadow: 0 0 20px rgba(0,255,255,0.8); */
 }
+
+
+#startDetectionBtn{
+    background: #f1f11a; /* Dark background */
+        color: #1a1a1a; /* Neon text color */
+        border: 2px solid #f1f11a; /* Neon border */
+        border-radius: 50px; /* Pill-shaped */
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 12px 28px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: 0.4s all ease;
+        
+}
+ #startDetectionBtn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(0, 255, 204, 0.5), transparent);
+        transition: all 0.5s ease;
+    }
+
+    #startDetectionBtn:hover::before {
+        left: 100%;
+    }
+
+    #startDetectionBtn:hover {
+        background: #f1f11a; /* Button fills neon on hover */
+        color: #1a1a1a; /* Text in dark */
+        box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    }
+
+    #guideVideoSection {
+    margin-top: -130px !important;   /* adjust value as needed */
+    width: 30rem;
+    }
+
+    #playGuideBtn {
+        background: #f1f11a; /* Dark background */
+        color: #1a1a1a; /* Neon text color */
+        border: 2px solid #1a1a1a; /* Neon border */
+        border-radius: 50px; /* Pill-shaped */
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 12px 28px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: 0.4s all ease;
+        box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    }
+
+    #playGuideBtn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(0, 255, 204, 0.5), transparent);
+        transition: all 0.5s ease;
+    }
+
+    #playGuideBtn:hover::before {
+        left: 100%;
+    }
+
+    #playGuideBtn:hover {
+        background: #1a1a1a; /* Button fills neon on hover */
+        color: #f1f11a; /* Text in dark */
+        box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 60px #00ffcc;
+    }

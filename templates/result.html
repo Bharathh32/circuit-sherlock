@@ -24,7 +24,7 @@
             <a class="navbar-brand fs-4 about-title" href="#"><span><img
                             src="{{ url_for('static', filename='assets/logo.png')}}" alt=""
                             width="55px" height="55px" class="mb-2" /></span>Circuit <span
-                        class="heading-2">Sherlock</span></a>
+                        class="" style="color: rgba(197, 39, 197, 0.858);">Sherlock</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,16 +32,16 @@
             <div class="collapse navbar-collapse mb-2" id="navbarNav">
                 <ul class="navbar-nav mx-auto fs-5">
                     <li class="nav-item me-3">
-                        <a class="nav-link fw-bold" aria-current="page" href="/Home">Home</a>
+                        <a class="nav-link nav-result fw-bold" aria-current="page" href="/Home">Home</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link fw-bold" href="/About">About Us</a>
+                        <a class="nav-link nav-result fw-bold" href="/About">About Us</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link fw-bold" href="/">Our AI</a>
+                        <a class="nav-link nav-result fw-bold" href="/">Our AI</a>
                     </li>
                     <li class="nav-item me-3">
-                        <a class="nav-link fw-bold" href="/Contact">Contact</a>
+                        <a class="nav-link nav-result fw-bold" href="/Contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -162,13 +162,13 @@
                     <div class="mx-5">
                         <h5 class="glass-heading">Quick Links</h5>
                         <ul class="list-unstyled mt-4">
-                            <li class="text-capitalize mb-2"><a href="" class="text-decoration-none text-white">Home</a>
+                            <li class="text-capitalize mb-2"><a href="/Home" class="text-decoration-none text-white">Home</a>
                             </li>
-                            <li class="text-capitalize mb-2"><a href="" class="text-decoration-none text-white">About
+                            <li class="text-capitalize mb-2"><a href="/About" class="text-decoration-none text-white">About
                                     Us</a></li>
-                            <li class="text-capitalize mb-2"><a href=""
-                                    class="text-decoration-none text-white">Model</a></li>
-                            <li class="text-capitalize mb-2"><a href=""
+                            <li class="text-capitalize mb-2"><a href="/"
+                                    class="text-decoration-none text-white">Our AI</a></li>
+                            <li class="text-capitalize mb-2"><a href="/Contact"
                                     class="text-decoration-none text-white">Contact</a></li>
                         </ul>
                     </div>

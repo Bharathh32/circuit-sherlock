@@ -45,7 +45,7 @@ os.makedirs(RESULT_FOLDER, exist_ok=True)
 # ---------------------------
 #  LOAD YOLO MODEL + CSV
 # ---------------------------
-model = YOLO("model/best.onnx")
+model = YOLO("model/best.pt")
 
 spares_df = pd.read_csv("spares.csv")
 

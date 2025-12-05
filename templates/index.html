@@ -33,8 +33,8 @@
         <nav class="navbar navbar-scrolled navbar-expand-lg bg-body-tertiary sticky-top">
             <div class="container-fluid">
                 <a class="navbar-brand fs-4" href="#"><span><img
-                            src="{{ url_for('static', filename='assets/ailogo.png')}}" alt=""
-                            width="55px" height="55px" class="mb-2" /></span>Circuit <span style="color: gold;">Sherlock</span> </a>
+                            src="{{ url_for('static', filename='assets/ailogo.png')}}" alt="" width="55px" height="55px"
+                            class="mb-2" /></span>Circuit <span style="color: gold;">Sherlock</span> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,16 +42,16 @@
                 <div class="collapse navbar-collapse mb-2" id="navbarNav">
                     <ul class="navbar-nav mx-auto fs-5">
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold" aria-current="page" href="/Home">Home</a>
+                            <a class="nav-link nav-index fw-bold" aria-current="page" href="/Home">Home</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold" href="/About">About Us</a>
+                            <a class="nav-link nav-index fw-bold" href="/About">About Us</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold" href="/">Our AI</a>
+                            <a class="nav-link nav-index fw-bold" href="/">Our AI</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold" href="/Contact">Contact</a>
+                            <a class="nav-link nav-index fw-bold" href="/Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -60,11 +60,13 @@
         <!-- navbar end -->
 
         <!-- SUMMARY SECTION -->
-        <div class="container mt-5 py-5" id="summarySection" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+        <div class="container mt-5 py-5" id="summarySection" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
             <div class="summary-card mx-auto " style="max-width:850px;">
                 <h2 class="fw-bold text-center">AI-Powered PCB Defect Detection</h2>
                 <p class="mt-3 text-center">
-                    Circuit Sherlock is an AI-powered system that detects defects in bare PCBs using a YOLO deep-learning model. Upload an image or use your live camera feed to analyze PCB defects instantly.
+                    Circuit Sherlock is an AI-powered system that detects defects in bare PCBs using a YOLO
+                    deep-learning model. Upload an image or use your live camera feed to analyze PCB defects instantly.
                 <div class="text-center mt-4">
                     <button id="startDetectionBtn" class="btn btn-primary px-4 py-2 rounded-3 fw-semibold detect-btn">
                         Start Detection
@@ -76,7 +78,7 @@
 
         <!-- MAIN TWO COLUMN LAYOUT -->
         <div class="container main-section mt-5">
-            <div class="row g-4" >
+            <div class="row g-4">
 
                 <!-- LEFT COLUMN: UPLOAD SECTION -->
                 <div class="col-md-6 equal-columns">
@@ -118,7 +120,7 @@
                             </div>
 
                             <button type="submit"
-                                class="btn btn-primary detect-btn mt-4 w-100 py-2 fw-semibold rounded-3">
+                                class="btn btn-primary detect-btn mt-4 w-100 py-2 fw-semibold rounded-3"  id="playGuideBtn1">
                                 Detect Defects
                             </button>
 
@@ -144,7 +146,8 @@
                                 </h2>
                                 <div id="flush-collapseOne" class="accordion-collapse collapse">
                                     <div class="accordion-body">
-                                        Circuit Sherlock is an AI-based system that identifies defects in bare PCB images using computer vision and deep learning.
+                                        Circuit Sherlock is an AI-based system that identifies defects in bare PCB
+                                        images using computer vision and deep learning.
                                     </div>
                                 </div>
                             </div>
@@ -158,7 +161,8 @@
                                 </h2>
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse">
                                     <div class="accordion-body">
-                                        Yes. The system supports live video camera detection for real-time PCB inspection.
+                                        Yes. The system supports live video camera detection for real-time PCB
+                                        inspection.
                                     </div>
                                 </div>
                             </div>
@@ -180,13 +184,14 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseThree">
+                                        data-bs-target="#flush-collapseFour">
                                         Do I need to install anything?
                                     </button>
                                 </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse">
+                                <div id="flush-collapseFour" class="accordion-collapse collapse">
                                     <div class="accordion-body">
-                                        No. You can directly upload an image or stream from your camera through the web interface.
+                                        No. You can directly upload an image or stream from your camera through the web
+                                        interface.
                                     </div>
                                 </div>
                             </div>
@@ -199,77 +204,99 @@
             </div>
         </div>
 
+        <!-- GUIDE VIDEO SECTION -->
+        <div class="container " id="guideVideoSection" style="display:none;" data-aos="fade-up">
+            <div class="p-3 shadow rounded-4  text-center">
 
+                <h3 class="fw-bold mb-3 text-white">How Detection Works</h3>
+                <p class="mb-3 text-white">Watch this quick guide before using the AI defect detector.</p>
 
-                <!-- Footer section start -->
-<footer class="footer glass-footer" data-aos="fade-up">
-    <div class="container">
-        <div class="row justify-content-center">
+                <!-- Play Button -->
+                <button class="btn btn-warning fw-semibold px-4 py-2 mb-3" id="playGuideBtn">
+                    ▶ Play Video
+                </button>
 
-            <!-- column 1 -->
-            <div class="col-sm-12 col-md-3 col-lg-3 glass-card">
-                <div class="mx-4">
-                    <h5 class="glass-heading">Circuit Sherlock</h5>
-                    <p class="mt-4 text-wite glass-text">
-                        AI-Powered Image-Based PCB Defect Detection System
-                        <br>
-                        Combining Deep Learning and Computer Vision for Smarter Manufacturing.
-                    </p>
-                </div>
+                <!-- Video -->
+                <video id="guideVideo" width="100%" class="rounded d-none" controls>
+                    <source src="{{ url_for('static', filename='Assets/guide video.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
             </div>
-
-            <!-- column 2 -->
-            <div class="col-sm-12 col-md-3 col-lg-3 glass-card">
-                <div class="mx-5">
-                    <h5 class="glass-heading">Quick Links</h5>
-                    <ul class="list-unstyled mt-4">
-                            <li class="text-capitalize mb-2"><a href=""
-                                    class="text-decoration-none text-white">Home</a>
-                            </li>
-                            <li class="text-capitalize mb-2"><a href=""
-                                    class="text-decoration-none text-white">About
-                                    Us</a></li>
-                            <li class="text-capitalize mb-2"><a href=""
-                                    class="text-decoration-none text-white">Model</a></li>
-                            <li class="text-capitalize mb-2"><a href=""
-                                    class="text-decoration-none text-white">Contact</a></li>
-                        </ul>
-                </div>
-            </div>
-
-            <!-- column 3 -->
-            <div class="col-sm-12 col-md-3 col-lg-3 glass-card">
-                <h5 class="glass-heading">Get in Touch</h5>
-                <div class="d-flex mt-4 glass-text">
-                    <div class="me-2"><i class="bi bi-geo-alt fs-4"></i></div>
-                    <div class="text-wite">
-                        <p>kukkatpally,road no 4 <br>Hyderabad,50087</p>
-                    </div>
-                </div>
-                <div class="d-flex glass-text">
-                    <div class="me-2"><i class="bi bi-telephone fs-4"></i></div>
-                    <div class="text-wite">
-                        <p>+91 9958441478</p>
-                    </div>
-                </div>
-                <div class="d-flex glass-text">
-                    <div class="me-2"><i class="bi bi-envelope fs-4"></i></div>
-                    <div class="text-wite">
-                        <p>CircuitSherlock@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
 
-    <hr>
 
-    <div class="text-center glass-text">
-        <p>© 2025 Circuit Sherlock</p>
-    </div>
-</footer>
-    <!-- Footer section End -->
+
+
+        <!-- Footer section start -->
+        <footer class="footer glass-footer mt-5" data-aos="fade-up">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <!-- column 1 -->
+                    <div class="col-sm-12 col-md-3 col-lg-3 glass-card">
+                        <div class="mx-4">
+                            <h5 class="glass-heading">Circuit Sherlock</h5>
+                            <p class="mt-4 text-wite glass-text">
+                                AI-Powered Image-Based PCB Defect Detection System
+                                <br>
+                                Combining Deep Learning and Computer Vision for Smarter Manufacturing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- column 2 -->
+                    <div class="col-sm-12 col-md-3 col-lg-3 glass-card">
+                        <div class="mx-5">
+                            <h5 class="glass-heading">Quick Links</h5>
+                            <ul class="list-unstyled mt-4">
+                                <li class="text-capitalize mb-2"><a href="/Home"
+                                        class="text-decoration-none text-white">Home</a>
+                                </li>
+                                <li class="text-capitalize mb-2"><a href="/About"
+                                        class="text-decoration-none text-white">About
+                                        Us</a></li>
+                                <li class="text-capitalize mb-2"><a href="/"
+                                        class="text-decoration-none text-white">Model</a></li>
+                                <li class="text-capitalize mb-2"><a href="/Contact"
+                                        class="text-decoration-none text-white">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- column 3 -->
+                    <div class="col-sm-12 col-md-3 col-lg-3 glass-card">
+                        <h5 class="glass-heading">Get in Touch</h5>
+                        <div class="d-flex mt-4 glass-text">
+                            <div class="me-2"><i class="bi bi-geo-alt fs-4"></i></div>
+                            <div class="text-wite">
+                                <p>kukkatpally,road no 4 <br>Hyderabad,50087</p>
+                            </div>
+                        </div>
+                        <div class="d-flex glass-text">
+                            <div class="me-2"><i class="bi bi-telephone fs-4"></i></div>
+                            <div class="text-wite">
+                                <p>+91 9958441478</p>
+                            </div>
+                        </div>
+                        <div class="d-flex glass-text">
+                            <div class="me-2"><i class="bi bi-envelope fs-4"></i></div>
+                            <div class="text-wite">
+                                <p>CircuitSherlock@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="text-center glass-text">
+                <p>© 2025 Circuit Sherlock</p>
+            </div>
+        </footer>
+        <!-- Footer section End -->
 
 
     </section>

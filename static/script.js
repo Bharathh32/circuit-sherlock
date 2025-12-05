@@ -121,5 +121,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// Show Guide Video Section When Start Detection is Pressed
+    document.getElementById("startDetectionBtn").addEventListener("click", function () {
+        document.getElementById("guideVideoSection").style.display = "block";
+    });
+
+    // Play Button Logic
+    document.getElementById("playGuideBtn").addEventListener("click", function () {
+        const video = document.getElementById("guideVideo");
+
+        video.classList.remove("d-none");
+        video.play();
+
+        this.style.display = "none"; // Hide play button after starting
+    });
+
 
 

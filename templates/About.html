@@ -33,16 +33,16 @@
                 <div class="collapse navbar-collapse mb-2" id="navbarNav">
                     <ul class="navbar-nav mx-auto fs-5">
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold" aria-current="page" href="/Home">Home</a>
+                            <a class="nav-link nav-about fw-bold" aria-current="page" href="/Home">Home</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold" href="/About">About Us</a>
+                            <a class="nav-link nav-about fw-bold" href="/About">About Us</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold" href="/">Our AI</a>
+                            <a class="nav-link nav-about fw-bold" href="/">Our AI</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link fw-bold" href="/Contact">Contact</a>
+                            <a class="nav-link nav-about fw-bold" href="/Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -167,7 +167,7 @@
         </section>
 
         <!-- Industry section -->
-        <section class="industries-section container">
+        <section class="industries-section container py-5">
             <!-- SECTION HEADING -->
             <h2 class="text-center fw-bold section-title heading-1" data-aos="zoom-out-down">
                 Where Circuit Sherlock Makes an Impact
@@ -235,7 +235,7 @@
         </section>
 
         <!-- our team members stylings -->
-        <section class="team-info py-5">
+        <section class="team-info mb-5">
             <div class="container" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <h2 class="text-center mb-5 fw-bold heading-1">Our Team</h2>
 
@@ -265,7 +265,7 @@
 
                                     <!-- Member 3 -->
                                     <div class="col-12 col-md-4">
-                                        <img src="{{ url_for('static', filename='./Assets/team3.jpg')}}"
+                                        <img src="{{ url_for('static', filename='./Assets/maneesha.jpeg')}}"
                                             class="member-img rounded-circle" alt="" />
                                         <h5 class="mt-3 fw-bold text-white">Maneesha</h5>
                                         <p class="text-white">Full Stack Developer</p>
@@ -298,7 +298,7 @@
 
                                     <!-- Member 6 -->
                                     <div class="col-12 col-md-4">
-                                        <img src="{{ url_for('static', filename='./Assets/team6.jpg')}}"
+                                        <img src="{{ url_for('static', filename='./Assets/varsha.jpeg')}}"
                                             class="member-img rounded-circle" alt="" />
                                         <h5 class="mt-3 fw-bold text-white">Varsha</h5>
                                         <p class="text-white">Data Scientist</p>
@@ -334,16 +334,16 @@
                             <h5 class="glass-heading">Quick Links</h5>
                             <ul class="list-unstyled mt-4">
                                 <li class="text-capitalize mb-2">
-                                    <a href="" class="text-decoration-none text-white">Home</a>
+                                    <a href="/Home" class="text-decoration-none text-white">Home</a>
                                 </li>
                                 <li class="text-capitalize mb-2">
-                                    <a href="" class="text-decoration-none text-white">About Us</a>
+                                    <a href="/About" class="text-decoration-none text-white">About Us</a>
                                 </li>
                                 <li class="text-capitalize mb-2">
-                                    <a href="" class="text-decoration-none text-white">Model</a>
+                                    <a href="/" class="text-decoration-none text-white">Our AI</a>
                                 </li>
                                 <li class="text-capitalize mb-2">
-                                    <a href="" class="text-decoration-none text-white">Contact</a>
+                                    <a href="/Contact" class="text-decoration-none text-white">Contact</a>
                                 </li>
                             </ul>
                         </div>
